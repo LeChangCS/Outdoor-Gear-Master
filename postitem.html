@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Post Item</title>
+</head>
+<style>
+    img{
+       position: absolute;
+        top: 0px;
+       right:-650px;
+    
+        
+    }
+ h1 {
+    color:black;
+    font-family:verdana;
+    font-size:200%;
+     
+    }  
+    
+form{
+     position: absolute;
+    top:250px;
+    right:850px
+    }
+form1{
+     position: absolute;
+    top:300px;
+    right:450px;
+    }
+    
+    form2{
+    position: absolute;
+    top:700px;
+    right:700px;  
+    } 
+form3{
+    position: absolute;
+    top:750px;
+    right:760px;
+    }
+    form4{
+    position:absolute;
+    top:800px;
+    right:300px;
+    font-size:500%;
+    }
+       
+    </style>
+<body>
+    <img src="images/OMG.png" alt="Cannot find image"
+    >
+    
+<form>
+Title:<br>
+    <input type ="text" name ="titlename">
+    <br>
+</form>   
+<form1>
+ Description：<br>
+    <input type ="text" name ="description" style="width:530px;height:350px">      
+    
+</form1>
+<form2 action="upload_page.php" method ="post"
+    enctype ="multipart/form-data">
+   Upload Picture:
+    <input type="picture" name="Upload images" id ="pictureSubmit">
+    <input type="submit" value="Submit">
+    </form2>   
+<form3 action="">
+<input type="checkbox"  name ="Agreement" value = "Policy">I Agree With the Term and Policy<br>  
+</form3>
+<form4 action="mainsite.html" method ="post">
+<input type="submit" value="Post Item">    
+</form4>
+    
+<header>
+<h1>Post Item</h1>
+
+    
+
+    </header>
+</body>
+</html>
