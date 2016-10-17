@@ -15,9 +15,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Datepicker - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+	
+	
+	
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
@@ -25,6 +25,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     $( "#datepicker" ).datepicker();
   } );
   </script>
+									<script type="text/javascript">
+									var datefield=document.createElement("input")
+								  datefield.setAttribute("type", "date")
+								  if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+									document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+									document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+									document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+									}
+							</script>
+
+				<script>
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+        jQuery(function($){ //on document.ready
+            $('#start_date').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+            $('#end_date').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        })
+    }
+</script>
+				
+				
 </head>
 <body>
 <!--header-->
@@ -35,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 				</div>
 				<div class="col-md-4 logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>	
+					<a href="index.html"><img src="images/OMG.png" alt=""></a>	
 				</div>
 		
 			<div class="col-md-4 header-left">		
@@ -99,14 +123,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="col-md-5 grid">		
 		<div class="flexslider">
 			  <ul class="slides">
-			    <li data-thumb="images/si.jpg">
-			        <div class="thumb-image"> <img src="images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
+			    <li data-thumb="images/item1.jpg">
+			        <div class="thumb-image"> <img src="images/item1.jpg" data-imagezoom="true" class="img-responsive"> </div>
 			    </li>
-			    <li data-thumb="images/si1.jpg">
-			         <div class="thumb-image"> <img src="images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+			    <li data-thumb="images/item1.jpg">
+			         <div class="thumb-image"> <img src="images/item1.jpg" data-imagezoom="true" class="img-responsive"> </div>
 			    </li>
-			    <li data-thumb="images/si2.jpg">
-			       <div class="thumb-image"> <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+			    <li data-thumb="images/item1.jpg">
+			       <div class="thumb-image"> <img src="images/item1.jpg" data-imagezoom="true" class="img-responsive"> </div>
 			    </li> 
 			  </ul>
 		</div>
@@ -129,76 +153,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							<div class="clearfix"> </div>
 							</div>
-							
+							<label>Daily Deal: </label>
 								<label  class="add-to item_price">$32.8</label>
-							
+								<label>per day</label>
+							<div>
+
+							</div>
 							<div class="available">
-								<h6>Available Options :</h6>
+								<h6>Select Duration:</h6>
 								<ul>
-									<p>Date: <input type="text" id="datepicker"></p>
-								<li>Start Date:<select>
-									<option>Large</option>
-									<option>Medium</option>
-									<option>small</option>
-									<option>Large</option>
-									<option>small</option>
-								</select></li>
-								<li>Return Date:
-										<select>
-										<option>U.S.Dollar</option>
-										<option>Euro</option>
-									</select></li>
+									<li>
+									<p style="color: black">Start Date:<input name="start_date" id="start_date" type="date" required/></p>
+									</li>
+									<li>
+									<p style="color: black">End Date:<input name="end_date" id="end_date" type="date" required/></p>
+									</li>
 							</ul>
 						</div>
-								<a href="#" class="cart item_add">More details</a>
+								<a href="#" class="cart item_add">Add to Cart</a>
+								<a href="checkout.html" class="cart item_add">Continue to Cart</a>
+								<a href="mainsite.html" class="cart item_add">Return to MailSite</a>
 						</div>
 					</div>
-			<div class="clearfix"> </div>
-			<div class="content-top1">
-				<div class="col-md-4 col-md3">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi6.png" alt="" />
-						</a>
-						<h3><a href="single.html">Jeans</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>	
-			<div class="col-md-4 col-md3">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi7.png" alt="" />
-						</a>
-						<h3><a href="single.html">Tops</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-						
-					</div>
-				</div>	
-			<div class="col-md-4 col-md3">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi.png" alt="" />
-						</a>
-						<h3><a href="single.html">Tops</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-						
-					</div>
-				</div>	
-			
-			<div class="clearfix"> </div>
-			</div>		
+	
 </div>
 <!----->
 <div class="col-md-3 product-bottom">
