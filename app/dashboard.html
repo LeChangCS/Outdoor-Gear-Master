@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="omgApp">
+
 <head>
 <title>Dashboard</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-
-<!-- Custom Theme files -->
-<!--theme-style-->
+<!--<script><script src="js/jquery.min.js"></script>-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- start menu -->
+<!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>-->
 <link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/memenu.js"></script>
-<script>$(document).ready(function(){$(".memenu").memenu();});</script>
-<script src="js/simpleCart.min.js"> </script>
-<!-- slide -->
-        <!-- build:css styles/main.css -->
+<!--<script>$(document).ready(function(){$(".memenu").memenu();});</script>-->
+<!--<script><script src="js/simpleCart.min.js"> </script>-->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/bootstrap-social.css" rel="stylesheet">
     <link href="styles/mystyles.css" rel="stylesheet">
-    <!-- endbuild -->
+
 </head>
 <body>
 <!--header-->
@@ -62,94 +54,36 @@
 				<div class="col-md-2 number">
 					
 				</div>
-	<div class="col-md-8 h_menu4">
+	            <div class="col-md-8 h_menu4">
 				<ul class="memenu skyblue">
 
 					  <li class=" grid"><a  href="mainsite.html">Home</a></li>	
-				      <li><a  href="#">Gear</a>
+				      <li><a  href="gear.html">Gear</a>
                       <li><a href="postitem.html">Post Item</a></li>
 				      <li><a  href="dashboard.html">Dashboard</a>
                       <li><a  href="blog.html">Blog</a>				
 				      <li><a class="color6" href="contact.html">Conact</a></li>
 				      
 			  </ul> 
-			</div>
-				<div class="col-md-2 search">		
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-		</div>
-		<div class="clearfix"> </div>
-			<!---pop-up-box---->
-					  <script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
-					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<!---//pop-up-box---->
-				<div id="small-dialog" class="mfp-hide">
-				<div class="search-top">
-						<div class="login">
-							<input type="submit" value="">
-							<input type="text" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
-						</div>
-						<p>	Shopping</p>
-					</div>				
-				</div>
-				 <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-				</script>			
-	<!---->		
-		</div>
-	</div>
+              </div>
+        
+	       </div>
+       </div>
 </div>
 <!--//header-->
-<!---->
+
 <div class="container">
-	<div class="row row-content" ng-init="histories=[
-                                          {
-                                              itemName:'Black Diamond Camalot C4 Package',
-                                              image:'images/camalot.jpg',
-                                              state:'Rent',
-                                              category:'climbing',
-                                              price:'10',
-                                              date:'',
-                                              description:'Incredible expansion range and low weight make the Black Diamond Camalot C4 Package a perfect way to start off any trad rack or beef up an old one. These five cams (size 0.5-3) cover all the bases from fingers to fists.',
-                                              comment:''
-                                          },
-                                          {
-                                              itemName:'Climing shoe',
-                                              image:'images/climingshoe.jpeg',
-                                              state:'Rent',
-                                              category:'climbing',
-                                              price:'7',
-                                              date:'',
-                                              description:'The Men's Skwama Climbing Shoe is La Sportiva's high-performance slipper for competition bouldering and technical sport climbing. P3 technology applies a Permanent Power Platform that ensures the Skwama's downturn stays downturned.',
-                                              comment:''
-                                          },
-                                          {
-                                              itemName:'Icelantic Pioneer 109 Ski',
-                                              image:'images/ski.jpg',
-                                              state:'Leased',
-                                              category:'ski',
-                                              price:'10',
-                                              date:'',
-                                              description:'Whether you're looking to diversify your quicker with a well-rounded pair of skis between your big powder boards and skinny groomer sticks or seeking the elusive quiver-of-one ski, the Icelantic Pioneer 109 Ski will most definitely fit the bill.',
-                                              comment:''
-                                          }
-                                          ]">
-<!--           <div class="col-xs-12">
+	<div class="row row-content" ng-controller="dashboardController as dashCtrl" >
+        <div class="row">
+           <div class="col-md-2 col-md-offset-5">
+               <h1>Dashboard</h1>
+
+
+            </div><br>
+        </div>
+          <div class="col-xs-12">
                <ul class="media-list">
-                <li class="media" ng-repeat="history in histories">
+                <li class="media" ng-repeat="history in dashCtrl.histories">
                     <div class="media-left media-middle">
                         <a href="#">
                         <img class="media-object img-thumbnail"
@@ -158,8 +92,9 @@
                     </div>
                     <div class="media-body">
                         <h2 class="media-heading">{{history.itemName}}
-                         <span class="badge">{{history.state}}</span>
-                         <span class="badge">{{history.price | currency}}</span></h2>
+                         <span class="badge">State: {{history.state}}</span>
+                         <span class="badge">Price: {{history.price | currency}}</span>
+                         <span class="badge">Date: {{history.date}}</span></h2>
                         <p>{{history.description}}</p>
                         <p>Comment: {{history.comment}}</p>
                         <p>Type your comment:
@@ -168,9 +103,11 @@
                 </li>
             </ul>
             </div>
--->
+    </div>
+</div>
+
         
-        <h1>Dashboard</h1>
+<!--         <h1>Dashboard</h1>
     	    <table >
 		  <tr>
 			<th>Item</th>
@@ -221,7 +158,8 @@
 	<div class="clearfix"> </div>
     </div>
 </div>
-<!--footer-->
+-->
+
 <div class="footer">
 	<div class="container">
 		<div class="footer-top">
@@ -268,6 +206,44 @@
 </div>
 
     <script src="../bower_components/angular/angular.min.js"></script>
-<!--//footer-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+    <script>
+        var app=angular.module('omgApp',[]);
+        app.controller('dashboardController',function(){
+            var histories=[
+                                          {
+                                              itemName:'Black Diamond Camalot C4 Package',
+                                              image:'images/camalot.jpg',
+                                              state:'Rent',
+                                              category:'climbing',
+                                              price:'10',
+                                              date:'',
+                                              description:'Incredible expansion range and low weight make the Black Diamond Camalot C4 Package a perfect way to start off any trad rack or beef up an old one. These five cams (size 0.5-3) cover all the bases from fingers to fists.',
+                                              comment:''
+                                          },
+                                          {
+                                              itemName:'Climing shoe',
+                                              image:'images/climingshoe.jpeg',
+                                              state:'Rent',
+                                              category:'climbing',
+                                              price:'7',
+                                              date:'',
+                                              description:'The Men Skwama Climbing Shoe is La Sportiva high-performance slipper for competition bouldering and technical sport climbing. P3 technology applies a Permanent Power Platform that ensures the Skwama downturn stays downturned.',
+                                              comment:''
+                                          },
+                                          {
+                                              itemName:'Icelantic Pioneer 109 Ski',
+                                              image:'images/ski.jpg',
+                                              state:'Leased',
+                                              category:'ski',
+                                              price:'10',
+                                              date:'',
+                                              description:'Whether you are looking to diversify your quicker with a well-rounded pair of skis between your big powder boards and skinny groomer sticks or seeking the elusive quiver-of-one ski, the Icelantic Pioneer 109 Ski will most definitely fit the bill.',
+                                              comment:''
+                                          }
+                                          ]
+            this.histories = histories;
+        });
+    </script>
 </body>
 </html>
