@@ -26,7 +26,7 @@ or die(mysqli_error($con));
 
 echo "<script>
 alert('You have successfully signed up, please log in now!');
-window.location.href='index.php';
+window.location.href='index.html';
 </script>";
 
 mysqli_close($con);
