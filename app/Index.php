@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><?php session_start();?>
 
 <!--adfa-->
 	<!--LMAOoaoaoidhpiuashdsaiuhpiusdbi[asub-->
@@ -102,25 +102,25 @@
         <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="/" method="post">
+          <form action="login.php" method="post">
           
             <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email"required autocomplete="off" name="email"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" required autocomplete="off" name="password"/>
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
           
-          <button class="button button-block"/>Log In</button>
+          <button class="button button-block" name="submit">Log In</button>
           
           </form>
 

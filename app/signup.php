@@ -24,6 +24,10 @@ VALUES ('$firstName','$lastName', '$email', '$password')")
 or die(mysqli_error($con));
 
 
-echo "connect successfully";
+echo "<script>
+alert('You have successfully signed up, please log in now!');
+window.location.href='index.php';
+</script>";
+
 mysqli_close($con);
 ?>
