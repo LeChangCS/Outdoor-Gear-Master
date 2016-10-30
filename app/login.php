@@ -1,8 +1,8 @@
 <?php
 
 $DB_HOST = 'localhost';
-$DB_ROOT = 'root';
-$DB_PASSWORD = '1234';
+$DB_ROOT = 'group';
+$DB_PASSWORD = '12345';
 $DB_NAME = 'signup';
 
 
@@ -32,7 +32,10 @@ if(isset($_POST['submit'])){
  }
  else
  {
- echo "Username or Password is Invalid";
+ echo "<script>
+ alert('Invalid Username or Password');
+ window.location.href='index.html';
+ </script>";
  }
  mysqli_close($conn); // Closing connection
  }
