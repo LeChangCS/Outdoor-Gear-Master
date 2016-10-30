@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
  if($rows == 1){
   // Redirecting to other page
  echo "<script>
- alert('You have successfully loged up, enjoy!');
+ alert('You have successfully loged in, enjoy!');
  window.location.href='mainsite.html';
  </script>";
  }
