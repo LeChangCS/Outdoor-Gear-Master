@@ -1,8 +1,8 @@
 <?php
 
 $DB_HOST = 'localhost';
-$DB_ROOT = 'root';
-$DB_PASSWORD = '1234';
+$DB_ROOT = 'group';
+$DB_PASSWORD = '12345';
 $DB_NAME = 'signup';
 
 
@@ -12,6 +12,8 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 $con=mysqli_connect($DB_HOST, $DB_ROOT, $DB_PASSWORD, $DB_NAME);
+
+
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
