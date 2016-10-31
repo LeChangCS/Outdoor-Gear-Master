@@ -139,13 +139,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="modal-dialog">
 
     <!-- Modal content-->
+   
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Contact the item owner</h4>
       </div>
       <div class="modal-body">
-        <p>Please contact Leaser via this link xxxxxx.</p>
+        
+        <p>Please schedule an appointment with the owner here.</p>
+        <p id="feedback"></p> 
+        <form action="sendemail.php" method="post">   
+          <ul class="col-lg-offset-2">
+            <li>
+                <p>Your name:</p>
+                <input type="text" name="name" id="name"/>
+            </li>
+            <li>
+                <p>Your Email:</p>
+                <input type="text" name="email" id="email"/>
+            </li>
+            <li>
+                <p>Write your message to owner here:</p>
+                <textarea id="message" name="message" cols="42" rows="9"></textarea>
+            </li>
+            <li>
+                <input type="submit" value="Send">    
+            </li>
+          </ul>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
