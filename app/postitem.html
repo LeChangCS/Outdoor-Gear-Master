@@ -131,52 +131,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </header>
 
 <div>
-<form>
+<form action ="postitem.php" method="post">
 Title:<br>
-    <input type ="text" name ="titlename">
+    <input type ="text" name ="Title">
     <br>
-</form>     
-</div>    
+    
+    
 <div>
-<form1>
-     Description：<br/>      
-     <textarea rows="20" cols = "80" name="description"></textarea><br>
-</form1>
+
+Description：<br/>      
+     <textarea rows="20" cols = "80" name="Description"></textarea><br>
+
 </div> 
 <div>
-<form2 action="upload_page.php" method ="post"
-    enctype ="multipart/form-data">
-   Upload Picture:
+        
+ Price:<br>
+    <input type="number" name = "price">   
+    <br>        
+</div>
+<div>
+
+Upload Picture:
     <input type="picture" name="Upload images" id ="pictureSubmit">
     <input type="submit" value="Submit">
-  <br/> Choose Rental Period(Start):
+<br/> Choose Rental Period(Start):
     
-<input name="start_date" id="start_date" type="date" required/>
+<input name="Start_Date" id="Start_Date" type="date" required/>
 
-    
-  <br/> Choose Rental Period(End):
-    <input name="end_date" id="end_date" type="date" required/>
-    
-    </form2>  
+Categories:
+    <select name='categories'>
+    <option value ="snow">Snow</option>
+    <option value ="run">Run</option>
+    <option value ="travel">Travel</option>
+    <option value ="yoga">Yoga</option>
+    <option value ="climb">Climb</option>
+    </select>
+<br/> Choose Rental Period(End):
+    <input name="End_Date" id="End_Date" type="date" required/>
     </div>
-
-
 <div>
 <script1>
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:250px;width:500px;'><div id='gmap_canvas' style='height:250px;width:400px;'></div><div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="https://termsandcondiitionssample.com">terms and conditions sample</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(39.67479658976937,-104.95146170410767),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(39.67479658976937,-104.95146170410767)});infowindow = new google.maps.InfoWindow({content:'<strong>Location 1</strong><br>80210<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>  
 </script1>
 </div>
 <div>
-<form3 action="">
 <input type="checkbox"  name ="Agreement" value = "Policy">I Agree With the Term and Policy<br>  
-</form3>
 </div>
 <div>
-<form4 action="mainsite.html" method ="post">
 <input type="submit" value="Post Item">    
-</form4>
     </div>
-    </div>
+</form> 
 </div>
 
 
