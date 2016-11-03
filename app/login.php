@@ -1,5 +1,7 @@
 <?php
 
+session_start();//Le added this.
+
 $DB_HOST = 'localhost';
 $DB_ROOT = 'group';
 $DB_PASSWORD = '12345';
@@ -15,6 +17,9 @@ if(isset($_POST['submit'])){
  //Define $user and $pass
  $user=$_POST['email'];
  $pass=$_POST['password'];
+
+$_SESSION['username']=$user; //Le added this.
+     
  //Establishing Connection with server by passing server_name, user_id and pass as a patameter
  $conn = mysqli_connect($DB_HOST, $DB_ROOT, $DB_PASSWORD, $DB_NAME);
  //Selecting Database
@@ -27,7 +32,7 @@ if(isset($_POST['submit'])){
   // Redirecting to other page
  echo "<script>
  alert('You have successfully loged in, enjoy!');
- window.location.href='mainsite.html';
+ window.location.href='mainsite.php';
  </script>";
  }
  else
