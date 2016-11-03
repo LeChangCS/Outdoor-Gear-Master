@@ -1,7 +1,12 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>Contact</title>
+<title>Confirmation</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -19,6 +24,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>
 <script src="js/simpleCart.min.js"> </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- slide -->
 </head>
 <body>
@@ -27,16 +35,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header-top">
 		<div class="container">
 		<div class="col-md-4 world">
-
+					
 				</div>
 				<div class="col-md-4 logo">
-					<a href="mainsite.html"><img src="images/OMG.png" alt=""></a>	
+					<a href="index.html"><img src="images/OMG.png" alt=""></a>	
 				</div>
 		
-			<div class="col-md-4 header-left">		
-					<p class="log"><a href="account.html"  >Login</a>
-						<span>or</span><a  href="account.html"  >Signup</a></p>
-					
+			 <div class="col-md-4 header-left">		
+					<p class="log">
+						<?php echo 'Welcome, '.$_SESSION['username'];  ?>
+                    </p>
+
 					<div class="clearfix"> </div>
 			</div>
 				<div class="clearfix"> </div>
@@ -48,12 +57,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 				</div>
 	<div class="col-md-8 h_menu4">
-              <ul class="memenu skyblue">
+				<ul class="memenu skyblue">
 
-					  <li class=" grid"><a  href="mainsite.php">Home</a></li>	
-				      <li><a  href="gear.php">Gear</a>
+					  <li class=" grid"><a  href="mainsite.html">Home</a></li>	
+				      <li><a  href="gear.html">Gear</a>
                       <li><a href="postitem.html">Post Item</a></li>
-				      <li><a  href="dashboard.php">Dashboard</a>
+				      <li><a  href="dashboard.html">Dashboard</a>
                       <li><a  href="blog.html">Blog</a>				
 				      <li><a class="color6" href="contact.html">Conact</a></li>
 				      
@@ -98,41 +107,72 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!--//header-->
-<div class="contact">
-			<div class="container">
-				<h1>Contact</h1>
-				
-				<div class="contact-grids">
-					<div class="contact-form">
-							<form>
-								<div class="contact-bottom">
-									<div class="col-md-4 in-contact">
-										<span>Name</span>
-										<input type="text" >
-									</div>
-									<div class="col-md-4 in-contact">
-										<span>Email</span>
-										<input type="text" >
-									</div>
-									<div class="col-md-4 in-contact">
-										<span>Phonenumber</span>
-										<input type="text">
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							
-								<div class="contact-bottom-top">
-									<span>Message</span>
-									<textarea > </textarea>								
-									</div>
-								<input type="submit" value="Send">
-							</form>
-						</div>
-				
-			</div>
-		</div>
-	</div>
-<!--//content-->
+<!---->
+<div class="container">
+    <div class="row row-content" id="confirmation" name="confirmation">
+    <div style="padding:10px">
+          </div>
+      <div class="col-xs-8 col-lg-offset-3"> 
+          <h3>Congratulations, your reservation is confirmed!</h3>
+      </div>
+
+        
+        <!-- Trigger the modal with a button -->
+<div class="col-xs-8 col-lg-offset-5">
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Contact Leaser</button>
+</div>
+<!-- Modal -->
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Contact the item owner</h4>
+      </div>
+      <div class="modal-body">
+        
+        <p>Please schedule an appointment with the owner here.</p>
+        <p id="feedback"></p> 
+        <form action="sendemail.php" method="post">   
+          <ul class="col-lg-offset-2">
+            <li>
+                <p>Your name:</p>
+                <input type="text" name="name" id="name"/>
+            </li>
+            <li>
+                <p>Your Email:</p>
+                <input type="text" name="email" id="email"/>
+            </li>
+            <li>
+                <p>Write your message to owner here:</p>
+                <textarea id="message" name="message" cols="42" rows="9"></textarea>
+            </li>
+            <li>
+                <input type="submit" value="Send">    
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        
+          
+        </div>
+
+          </div>
+    
+
+
 
 <!--footer-->
 <div class="footer">
@@ -179,9 +219,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 	</div>
 </div>
-    
-    <script src="scripts/angular.min.js"></script>    <script src="scripts/angular.min.js"></script>
 
 <!--//footer-->
+    <script src="scripts/angular.min.js"></script>
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(39.673393, -104.962044);
+  var myCenter2 = new google.maps.LatLng(39.677625, -104.972171);
+  var mapOptions = {center: myCenter, zoom: 10};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+    var marker2 = new google.maps.Marker({
+    position: myCenter2,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+  marker2.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 </html>

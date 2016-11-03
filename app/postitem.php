@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $DB_HOST = 'localhost';
 $DB_ROOT = 'group';
 $DB_PASSWORD = '12345';
