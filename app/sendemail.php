@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $to=$_SESSION['username'];//need to select the owner's email from database
 $subject='This is an email from a renter of your item';
 
@@ -28,7 +28,7 @@ if($_POST){
         $feedback='Thanks for the email';
         echo "<script>
         alert('$feedback');
-        window.location.href='mainsite.html';
+        window.location.href='mainsite.php';
         </script>";
     }
     

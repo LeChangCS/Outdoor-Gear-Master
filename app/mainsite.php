@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="content-top1">
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3>
@@ -126,7 +126,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3><a href="single.html">Tent</a></h3>
@@ -140,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3><a href="single.html">Tent</a></h3>
@@ -154,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3><a href="single.html">Tent</a></h3>
@@ -174,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="single.html">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.html">Tent</a></h3>
+						<h3><a href="single.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
 								<a href="single.html" class="item_add">See Details</a>
@@ -185,7 +185,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3><a href="single.html">Tent</a></h3>
@@ -199,7 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3><a href="single.html">Tent</a></h3>
@@ -213,7 +213,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3><a href="single.html">Tent</a></h3>
