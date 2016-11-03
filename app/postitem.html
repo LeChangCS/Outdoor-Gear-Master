@@ -31,19 +31,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
     }
 </script>
-
-<script>
-    if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
-        jQuery(function($){ //on document.ready
-            $('#start_date').datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-            $('#end_date').datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-        })
-    }
-</script>
 <!-- slide -->
 </head>
 <body>
@@ -128,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </header>
 
 <div>
-<form action ="postitem.php" method="post">
+<form action ="postitem.php" method="post" enctype="multipart/form-data">
 Title:<br>
     <input type ="text" name ="Title">
     <br>
@@ -147,15 +134,10 @@ Description：<br/>
     <br>        
 </div>
 <div>
-
 Upload Picture:
-    <input type="picture" name="Upload images" id ="pictureSubmit">
-    <input type="submit" value="Submit">
-<br/> Choose Rental Period(Start):
-    
-<input name="Start_Date" id="Start_Date" type="date" required/>
-
-Categories:
+    <label>File:</label>
+    <input type="file" name="image" />
+    Categories:
     <select name='categories'>
     <option value ="snow">Snow</option>
     <option value ="run">Run</option>
@@ -163,8 +145,10 @@ Categories:
     <option value ="yoga">Yoga</option>
     <option value ="climb">Climb</option>
     </select>
+ <br/> Choose Rental Period(Start):    
+<input name="Start_Date" type="date"  required/>
 <br/> Choose Rental Period(End):
-    <input name="End_Date" id="End_Date" type="date" required/>
+   <input type="date" name="End_Date"  required/>
     </div>
 <div>
 <script1>
