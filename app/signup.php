@@ -1,4 +1,5 @@
 <?php
+session_start();//Le added this.
 
 $DB_HOST = 'localhost';
 $DB_ROOT = 'group';

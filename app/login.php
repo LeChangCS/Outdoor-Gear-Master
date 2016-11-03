@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
  $user=$_POST['email'];
  $pass=$_POST['password'];
 
-$_SESSION['username']=$user; //Le added this.
+ $_SESSION['username']=$user; //Le added this.
      
  //Establishing Connection with server by passing server_name, user_id and pass as a patameter
  $conn = mysqli_connect($DB_HOST, $DB_ROOT, $DB_PASSWORD, $DB_NAME);

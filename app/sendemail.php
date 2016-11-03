@@ -1,6 +1,6 @@
 <?php
 
-$to='lechangcs@gmail.com';//need to select the owner's email from database
+$to=$_SESSION['username'];//need to select the owner's email from database
 $subject='This is an email from a renter of your item';
 
 $name=$_POST['name'];
