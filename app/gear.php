@@ -33,7 +33,7 @@ session_start();
 					
 				</div>
 				<div class="col-md-4 logo">
-					<a href="mainsite.html"><img src="images/OMG.png" alt=""></a>	
+					<a href="mainsite.php"><img src="images/OMG.png" alt=""></a>	
 				</div>
 		
 			 <div class="col-md-4 header-left">		

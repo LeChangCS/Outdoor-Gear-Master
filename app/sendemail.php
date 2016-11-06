@@ -1,6 +1,7 @@
 <?php
 session_start();
-$to=$_SESSION['username'];//need to select the owner's email from database
+//$to=$_SESSION['username'];//need to select the owner's email from database
+$to=$_SESSION['itemOwner'];
 $subject='This is an email from a renter of your item';
 
 $name=$_POST['name'];
@@ -21,7 +22,7 @@ if($_POST){
         $feedback = 'fill out all the fields';
         echo "<script>
         alert('$feedback');
-        window.location.href='confirmation.html';
+        window.location.href='confirmation.php';
         </script>";
     }else{
         mail($to,$subject,$body,$header);
