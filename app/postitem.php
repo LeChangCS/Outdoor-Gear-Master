@@ -6,8 +6,8 @@ $DB_PASSWORD = '12345';
 $DB_NAME = 'signup';
 
 $price = $_POST['price'];
-$Start_Time = date(strtotime($_POST['Start_Time']));
-$End_Time = date(strtotime($_POST['End_Time']));
+$date1 = $_POST['date1'];
+$date2 = $_POST['date2'];
 $CheckBoxAgreement = $_POST['CheckBoxAgreement'];
 $Description = $_POST['Description'];
 $Title = $_POST['Title'];
@@ -20,8 +20,8 @@ if ($conn->connect_error) {
 } 
 mysqli_select_db($con, $DB_NAME);
 
-mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `Start_Time`, `End_Time`, `CheckBoxAgreement`,`Description`,`Title`,`Category`,`image`,`image_name`)
-VALUES ('{$_SESSION['username']}','$price','$Start_Time', '$End_Time', '$CheckBoxAgreement','$Description','$Title','$Category','{$image}','{$image_name}')")
+mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `date1`, `date2`, `CheckBoxAgreement`,`Description`,`Title`,`Category`,`image`,`image_name`)
+VALUES ('{$_SESSION['username']}','$price','$date1', '$date2', '$CheckBoxAgreement','$Description','$Title','$Category','{$image}','{$image_name}')")
 or die(mysqli_error($con));
 
 
