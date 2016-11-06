@@ -15,9 +15,7 @@ $Category = $_POST['categories'];
 $image = addslashes(file_get_contents($_FILES['image']['tmp_name'])); //SQL Injection defence!
 $image_name = addslashes($_FILES['image']['name']);
 $con=mysqli_connect($DB_HOST, $DB_ROOT, $DB_PASSWORD, $DB_NAME);        
-if ($conn->connect_error) {
-    die("Connection failed: ". $conn->connect_error);
-} 
+ 
 mysqli_select_db($con, $DB_NAME);
 
 mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `Start_Time`, `End_Time`, `CheckBoxAgreement`,`Description`,`Title`,`Category`,`image`,`image_name`)
