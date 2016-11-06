@@ -18,7 +18,7 @@ $con=mysqli_connect($DB_HOST, $DB_ROOT, $DB_PASSWORD, $DB_NAME);
  
 mysqli_select_db($con, $DB_NAME);
 
-mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `Start_Time`, `End_Time`, `CheckBoxAgreement`,`Description`,`Title`,`Category`,`image`,`image_name`)
+mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `date1`, `date2`, `CheckBoxAgreement`,`Description`,`Title`,`Category`,`image`,`image_name`)
 VALUES ('{$_SESSION['username']}','$price','$Start_Time', '$End_Time', '$CheckBoxAgreement','$Description','$Title','$Category','{$image}','{$image_name}')")
 or die(mysqli_error($con));
 
