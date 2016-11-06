@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="content-top1">
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.php">
+						<a href="single1.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
 						<h3>
@@ -119,34 +119,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single1.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 					</div>
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.php">
+						<a href="single2.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.html">Tent</a></h3>
+						<h3><a href="single2.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
-								<div class="clearfix"> </div>
-						</div>
-						
-					</div>
-				</div>	
-			<div class="col-md-3 col-md2">
-					<div class="col-md1">
-						<a href="single.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
-						</a>
-						<h3><a href="single.html">Tent</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single2.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -154,13 +140,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.php">
+						<a href="single3.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.html">Tent</a></h3>
+						<h3><a href="single3.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single3.php" class="item_add">See Details</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	
+			<div class="col-md-3 col-md2">
+					<div class="col-md1">
+						<a href="single4.php">
+							<img class="img-responsive" src="images/item1.jpg" alt="" />
+						</a>
+						<h3><a href="single4.php">Tent</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="single4.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -171,13 +171,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="content-top1">
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.html">
+						<a href="single5.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.php">Tent</a></h3>
+						<h3><a href="single5.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single5.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -185,13 +185,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.php">
+						<a href="single6.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.html">Tent</a></h3>
+						<h3><a href="single6.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single6.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -199,13 +199,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.php">
+						<a href="single7.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.html">Tent</a></h3>
+						<h3><a href="single7.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single7.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -213,13 +213,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single.php">
+						<a href="single8.php">
 							<img class="img-responsive" src="images/item1.jpg" alt="" />
 						</a>
-						<h3><a href="single.html">Tent</a></h3>
+						<h3><a href="single8.php">Tent</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
-								<a href="single.html" class="item_add">See Details</a>
+								<a href="single8.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
