@@ -6,8 +6,8 @@ $DB_PASSWORD = '12345';
 $DB_NAME = 'signup';
 
 $price = $_POST['price'];
-$Start_Time = date('m/d/Y', strtotime($_POST['Start_Time']));
-$End_Time = date("m/d/Y", strtotime($_POST['End_Time']));
+$Start_Time = date(strtotime($_POST['Start_Time']));
+$End_Time = date(strtotime($_POST['End_Time']));
 $CheckBoxAgreement = $_POST['CheckBoxAgreement'];
 $Description = $_POST['Description'];
 $Title = $_POST['Title'];
