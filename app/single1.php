@@ -43,8 +43,10 @@ $host="localhost";
 <!DOCTYPE html>
 <html>
 <head>
-<title>Single</title>
+<title>PostItem</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -54,42 +56,37 @@ $host="localhost";
 <meta name="keywords" content="Fashion Mania Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!---->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	
-	
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
-									<script type="text/javascript">
-									var datefield=document.createElement("input")
-								  datefield.setAttribute("type", "date")
-								  if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
-									document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
-									document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
-									document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
-									}
-							</script>
-
-				<script>
-    if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
-        jQuery(function($){ //on document.ready
-            $('#start_date').datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-            $('#end_date').datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-        })
-    }
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<script src="js/simpleCart.min.js"> </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+    <script type="text/javascript">
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+    }
 </script>
-				
+
+<script>
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+        jQuery(function($){ //on document.ready
+            $('#date1').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+            $('#date2').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        })
+    }
+</script>	
 				
 </head>
 <body>
@@ -187,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     foreach($row as $key=>$val)
                                     {
 
-
+                                            $_SESSION['itemName']=$val;
                                             echo "{$key}: {$val}<br />";
 
 
@@ -257,23 +254,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div>
 
 							</div>
-							<div class="available">
-								<h6>Select Duration:</h6>
+							<div>
+								<h1>Select Duration:</h1>
                                 <form action="rentitem.php" method="post">                               
-								<ul>
-									<li>
-									<p style="color: black">Start Date:<input name="start_date" id="start_date" type="date" required/></p>
-									</li>
-									<li>
-									<p style="color: black">End Date:<input name="end_date" id="end_date" type="date" required/></p>
-									</li>
+							    <div>
                                     
-							    </ul>
-                                <ul>
-                                <li>
+									
+									Start Date:
+                                        <input name="date1" id="date1" type="date" required/>
+									
+									
+									End Date:<input name="date2" id="date2" type="date" required/>
+                                </div>         
+							   
                                         <a class="cart item_add"><input type="submit" value="Reserve"></a>
-                                    </li>    
-                                </ul>
+                                   
+                                
                                 </form>
 						    </div>
 							

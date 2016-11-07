@@ -18,9 +18,11 @@
         die("Connection failed!".mysqli_connect_error());
     }
 
-    $sql="SELECT * FROM postItem ORDER BY ID desc";
+    $sql="SELECT * FROM postItem WHERE itemowner='{$_SESSION['username']}'";
     $res=mysqli_query($conn,$sql); 
 
+    $sqlRented="SELECT * FROM rentItem WHERE renter='{$_SESSION['username']}'";
+    $resRented=mysqli_query($conn,$sqlRented); 
  
 ?>
 <!DOCTYPE html>
@@ -90,39 +92,65 @@
 </div>
 <!--//header-->
 
-<div class="container">
-	<div class="row row-content" ng-controller="dashboardController as dashCtrl" >
-        <div class="row">
-           <div class="col-md-2 col-md-offset-5">
-               <h1>Dashboard</h1>
+  
+    <h1>
+        Items I've posted:
+    </h1>
+    <div class="col-lg-offset-4">
+    
+    <?php
+    if(!$res)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($res))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            
+                                            echo "{$key}: {$val}<br />";
 
 
-            </div><br>
-        </div>
-          <div class="col-xs-12">
-               <ul class="media-list">
-                <li class="media" ng-repeat="history in dashCtrl.histories">
-                    <div class="media-left media-middle">
-                        <a href="#">
-                        <img class="media-object img-thumbnail"
-                         ng-src={{history.image}} alt="camalot">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h2 class="media-heading">{{history.itemName}}
-                         <span class="badge">State: {{history.state}}</span>
-                         <span class="badge">Price: {{history.price | currency}}</span>
-                         <span class="badge">Date: {{history.date}}</span></h2>
-                        <p>{{history.description}}</p>
-                        <p>Comment: {{history.comment}}</p>
-                        <p>Type your comment:
-                         <input type="text" ng-model="history.comment"></p>
-                    </div>
-                </li>
-            </ul>
-            </div>
+                                    }
+                                    
+                                    echo "<br/>";
+                                }
+
+                                mysqli_free_result($res);
+    ?>
     </div>
-</div>
+   
+
+ 
+    <h1>
+        Items I've rented:
+    </h1>
+    <div class="col-lg-offset-4">
+    
+    <?php
+    if(!$resRented)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resRented))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            
+                                            echo "{$key}: {$val}<br />";
+
+
+                                    }
+                                    
+                                    echo "<br/>";
+                                }
+
+                                mysqli_free_result($res);
+    ?>
+
+    </div>
 
         
 <!--         <h1>Dashboard</h1>
@@ -225,43 +253,6 @@
 
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
-    <script>
-        var app=angular.module('omgApp',[]);
-        app.controller('dashboardController',function(){
-            var histories=[
-                                          {
-                                              itemName:'Black Diamond Camalot C4 Package',
-                                              image:'images/camalot.jpg',
-                                              state:'Rent',
-                                              category:'climbing',
-                                              price:'10',
-                                              date:'',
-                                              description:'Incredible expansion range and low weight make the Black Diamond Camalot C4 Package a perfect way to start off any trad rack or beef up an old one. These five cams (size 0.5-3) cover all the bases from fingers to fists.',
-                                              comment:''
-                                          },
-                                          {
-                                              itemName:'Climing shoe',
-                                              image:'images/climingshoe.jpeg',
-                                              state:'Rent',
-                                              category:'climbing',
-                                              price:'7',
-                                              date:'',
-                                              description:'The Men Skwama Climbing Shoe is La Sportiva high-performance slipper for competition bouldering and technical sport climbing. P3 technology applies a Permanent Power Platform that ensures the Skwama downturn stays downturned.',
-                                              comment:''
-                                          },
-                                          {
-                                              itemName:'Icelantic Pioneer 109 Ski',
-                                              image:'images/ski.jpg',
-                                              state:'Leased',
-                                              category:'ski',
-                                              price:'10',
-                                              date:'',
-                                              description:'Whether you are looking to diversify your quicker with a well-rounded pair of skis between your big powder boards and skinny groomer sticks or seeking the elusive quiver-of-one ski, the Icelantic Pioneer 109 Ski will most definitely fit the bill.',
-                                              comment:''
-                                          }
-                                          ]
-            this.histories = histories;
-        });
-    </script>
+ 
 </body>
 </html>
