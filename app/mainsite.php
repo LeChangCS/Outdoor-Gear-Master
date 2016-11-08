@@ -115,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single1.php">
-							<img class="img-responsive" src="showImage.php?ID=1" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=<?php echo $lastID; ?>" alt="" />
 						</a>
 						<h3>
                             
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single2.php">
-							<img class="img-responsive" src="showImage.php?ID=2" alt="" />
+							<img class="img-responsive" src="showImage.php?id=<?php echo $row[$id]; ?>" alt="" />
 						</a>
 						<h3><a href="single2.php">Tent</a></h3>
 						<div class="price">
@@ -145,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single3.php">
-							<img class="img-responsive" src="showImage.php?ID=3" alt="" />
+							<img class="img-responsive" src="showImage.php?id=<?php echo $row[$ID]; ?>" alt="" />
 						</a>
 						<h3><a href="single3.php">Tent</a></h3>
 						<div class="price">
