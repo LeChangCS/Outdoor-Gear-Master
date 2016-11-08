@@ -59,7 +59,7 @@ session_start();
                       <li><a href="postitem.html">Post Item</a></li>
 				      <li><a  href="dashboard.php">Dashboard</a>
                       <li><a  href="blog.html">Blog</a>				
-				      <li><a class="color6" href="contact.html">Conact</a></li>
+				      
 				      
 			  </ul> 
               </div>

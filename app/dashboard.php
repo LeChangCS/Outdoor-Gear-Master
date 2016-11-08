@@ -82,7 +82,7 @@
                       <li><a href="postitem.html">Post Item</a></li>
                     <li><a  href="dashboard.php">Dashboard</a></li>
                     <li><a  href="blog.html">Blog</a></li>				
-				      <li><a class="color6" href="contact.html">Conact</a></li>
+				      
 				      
 			  </ul> 
               </div>
