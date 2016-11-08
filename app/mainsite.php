@@ -115,7 +115,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single1.php">
+
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
+
 							<img class="img-responsive" src="showImage.php?ID=<?php echo $lastID; ?>" alt="" />
+
 						</a>
 						<h3>
                             
@@ -131,7 +153,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single2.php">
+
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 1,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
+
 							<img class="img-responsive" src="showImage.php?id=<?php echo $row[$id]; ?>" alt="" />
+
 						</a>
 						<h3><a href="single2.php">Tent</a></h3>
 						<div class="price">
@@ -145,7 +189,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single3.php">
+
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 2,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
+
 							<img class="img-responsive" src="showImage.php?id=<?php echo $row[$ID]; ?>" alt="" />
+
 						</a>
 						<h3><a href="single3.php">Tent</a></h3>
 						<div class="price">
@@ -159,7 +225,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single4.php">
-							<img class="img-responsive" src="showImage.php?ID=4" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 3,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
 						</a>
 						<h3><a href="single4.php">Tent</a></h3>
 						<div class="price">
@@ -176,7 +260,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single5.php">
-							<img class="img-responsive" src="showImage.php?ID=5" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 4,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
 						</a>
 						<h3><a href="single5.php">Tent</a></h3>
 						<div class="price">
@@ -191,7 +293,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single6.php">
-							<img class="img-responsive" src="showImage.php?ID=6" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 5,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
 						</a>
 						<h3><a href="single6.php">Tent</a></h3>
 						<div class="price">
@@ -205,7 +325,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single7.php">
-							<img class="img-responsive" src="showImage.php?ID=7" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 6,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
 						</a>
 						<h3><a href="single7.php">Tent</a></h3>
 						<div class="price">
@@ -219,7 +357,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single8.php">
-							<img class="img-responsive" src="showImage.php?ID=8" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" />
 						</a>
 						<h3><a href="single8.php">Tent</a></h3>
 						<div class="price">
@@ -236,36 +392,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>   
 			<div class="clearfix"> </div>
 		
-    <?php
-        $sql="SELECT * FROM postItem ORDER BY ID desc";
-        $res=mysqli_query($conn,$sql); 
-    
-        $titlelinks = array("http://www.google.com","http://www.kimo.com");
-    
-        if(!$res)
-        {
-            die("query failed!");
-        }
-        while($row=mysqli_fetch_assoc($res))
-        {
-            foreach($row as $key=>$val)
-            {
-                
-                
-                    echo "{$key}: "."<a href='{
-        
-                    $titlelinks[1]
-                    
-                    }'>{$val}</a><br />";
-                
-                
-            }
-            echo "<br /> <hr /> <br />";
-            
-        }
-
-        mysqli_free_result($res);
-    ?>
 
 <!--footer-->
 <div class="footer">
