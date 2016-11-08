@@ -21,6 +21,7 @@ session_start();//Le added this.
     $sql="SELECT * FROM postItem ORDER BY ID desc";
     $res=mysqli_query($conn,$sql); 
 ?>
+<!DOCTYPE html>
 
 <html>
     <head>
@@ -84,6 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 		</div>
 		</div>
+        </div>
 		<div class="container">
 			<div class="head-top">
 				
@@ -103,6 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-sm-2 search">		
 		
 		</div>
+        </div>
 		<div class="clearfix"> </div>
 <div class="content">
 	<div class="container">
@@ -112,10 +115,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single1.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=1" alt="" />
 						</a>
 						<h3>
-                            ski
+                            
                         </h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
@@ -124,10 +127,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 				</div>	
+
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single2.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=2" alt="" />
 						</a>
 						<h3><a href="single2.php">Tent</a></h3>
 						<div class="price">
@@ -141,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single3.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=3" alt="" />
 						</a>
 						<h3><a href="single3.php">Tent</a></h3>
 						<div class="price">
@@ -155,7 +159,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single4.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=4" alt="" />
 						</a>
 						<h3><a href="single4.php">Tent</a></h3>
 						<div class="price">
@@ -167,12 +171,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>	
 			<div class="clearfix"> </div>
-			</div>	
+			
 			<div class="content-top1">
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single5.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=5" alt="" />
 						</a>
 						<h3><a href="single5.php">Tent</a></h3>
 						<div class="price">
@@ -182,11 +186,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						
 					</div>
-				</div>	
+				</div>
+                </div>
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single6.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=6" alt="" />
 						</a>
 						<h3><a href="single6.php">Tent</a></h3>
 						<div class="price">
@@ -200,7 +205,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single7.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=7" alt="" />
 						</a>
 						<h3><a href="single7.php">Tent</a></h3>
 						<div class="price">
@@ -214,7 +219,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single8.php">
-							<img class="img-responsive" src="images/item1.jpg" alt="" />
+							<img class="img-responsive" src="showImage.php?ID=8" alt="" />
 						</a>
 						<h3><a href="single8.php">Tent</a></h3>
 						<div class="price">
@@ -225,11 +230,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 					</div>
 				</div>	
+             </div>
+    </div>
+             </div>
+    </div>   
 			<div class="clearfix"> </div>
-			</div>	
-		</div>
-
-	</div>
+		
     <?php
         $sql="SELECT * FROM postItem ORDER BY ID desc";
         $res=mysqli_query($conn,$sql); 
@@ -260,7 +266,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         mysqli_free_result($res);
     ?>
-</div>
+
 <!--footer-->
 <div class="footer">
 	<div class="container">
@@ -269,6 +275,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>	
 		</div>	
 	</div>
+    </div>
 	<div class="footer-bottom">
 		<div class="container">
 				<div class="col-md-3 footer-bottom-cate">
@@ -310,10 +317,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 			</div>
 	</div>
-</div>
 
 <!--//footer-->
-            
+             
     </body>
 
 </html>
