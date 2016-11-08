@@ -13,6 +13,7 @@ $query = mysqli_query($con, "SELECT * FROM `postItem` WHERE `ID` = '$ID'");
     while($row = mysqli_fetch_assoc($query))
     {
         $imageName = $row['title'];
+        
     }
     
     echo $imageName;
