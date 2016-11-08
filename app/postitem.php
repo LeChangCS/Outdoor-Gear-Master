@@ -20,8 +20,8 @@ if ($conn->connect_error) {
 } 
 mysqli_select_db($con, $DB_NAME);
 
-mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `date1`, `date2`, `CheckBoxAgreement`,`Description`,`Title`,`Category`,`image`,`image_name`)
-VALUES ('{$_SESSION['username']}','$price','$date1', '$date2', '$CheckBoxAgreement','$Description','$Title','$Category','{$image}','{$image_name}')")
+mysqli_query($con,"INSERT INTO postitem (`itemowner`, `price`, `date1`, `date2`,`Description`,`Title`,`Category`,`image`,`image_name`)
+VALUES ('{$_SESSION['username']}','$price','$date1', '$date2', '$Description','$Title','$Category','{$image}','{$image_name}')")
 or die(mysqli_error($con));
 
 
