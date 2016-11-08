@@ -8,8 +8,8 @@
 session_start();//Le added this.
 
     $host="localhost";
-    $dbuser="root";
-    $pass="root";
+    $dbuser="group";
+    $pass="12345";
     $dbname="signup";
     $conn=mysqli_connect($host,$dbuser,$pass,$dbname);
 
@@ -115,6 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single1.php">
+<<<<<<< Updated upstream
 
 							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 1";
                             $resultID=mysqli_query($conn,$queryID);
@@ -138,6 +139,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<img class="img-responsive" src="showImage.php?ID=<?php echo $lastID; ?>" alt="" />
 
+=======
+							<img class="img-responsive" src="showImage.php?ID=1" alt="" />
+>>>>>>> Stashed changes
 						</a>
 						<h3>
                             
@@ -153,6 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single2.php">
+<<<<<<< Updated upstream
 
 							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 1,1";
                             $resultID=mysqli_query($conn,$queryID);
@@ -176,6 +181,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<img class="img-responsive" src="showImage.php?id=<?php echo $row[$id]; ?>" alt="" />
 
+=======
+							<img class="img-responsive" src="showImage.php?ID=2" alt="" />
+>>>>>>> Stashed changes
 						</a>
 						<h3><a href="single2.php">Tent</a></h3>
 						<div class="price">
@@ -189,6 +197,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
 						<a href="single3.php">
+<<<<<<< Updated upstream
 
 							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 2,1";
                             $resultID=mysqli_query($conn,$queryID);
@@ -212,6 +221,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<img class="img-responsive" src="showImage.php?id=<?php echo $row[$ID]; ?>" alt="" />
 
+=======
+							<img class="img-responsive" src="showImage.php?ID=3" alt="" />
+>>>>>>> Stashed changes
 						</a>
 						<h3><a href="single3.php">Tent</a></h3>
 						<div class="price">
