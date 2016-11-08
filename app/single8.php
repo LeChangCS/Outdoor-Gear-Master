@@ -158,14 +158,122 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="col-md-5 grid">		
 		<div class="flexslider">
 			  <ul class="slides">
-			    <li data-thumb="images/item1.jpg">
-			        <div class="thumb-image"> <img src="images/item1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+			    <li data-thumb="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>">
+			        <div class="thumb-image"> <img class="img-responsive" data-imagezoom="true" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" alt="" /></div>
 			    </li>
-			    <li data-thumb="images/item1.jpg">
-			         <div class="thumb-image"> <img src="images/item1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+			    <li data-thumb="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>">
+			         <div class="thumb-image"> <img src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" data-imagezoom="true" class="img-responsive"> </div>
 			    </li>
-			    <li data-thumb="images/item1.jpg">
-			       <div class="thumb-image"> <img src="images/item1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+			    <li data-thumb="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>">
+			       <div class="thumb-image"> <img src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+                            $resultID=mysqli_query($conn,$queryID);
+                                
+                                
+                                if(!$resultID)
+                                {
+                                    die("query failed!");
+                                }
+                                while($row=mysqli_fetch_assoc($resultID))
+                                {
+                                    foreach($row as $key=>$val)
+                                    {
+
+                                            $_SESSION['thisID']=$val;
+                                            echo $_SESSION['thisID'];
+
+                                    }
+
+                                }   ?>" data-imagezoom="true" class="img-responsive"> </div>
 			    </li> 
 			  </ul>
 		</div>
