@@ -25,7 +25,7 @@ or die(mysqli_error($con));
 
 echo "<script>
 alert('Item selected!');
-window.location.href='payment.php';
+window.location.href='confirmation.php';
 </script>";
 
 mysqli_close($con);

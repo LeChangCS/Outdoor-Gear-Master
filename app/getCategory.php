@@ -20,6 +20,9 @@ session_start();//Le added this.
 
     $sql="SELECT * FROM postItem ORDER BY ID desc";
     $res=mysqli_query($conn,$sql); 
+
+    $Category = $_POST['categories'];
+    $_SESSION['category']=$_POST['categories'];
 ?>
 <!DOCTYPE html>
 
@@ -110,13 +113,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="content">
 	<div class="container">
 		<div class="content-top">
-			<h1>Recent Products</h1>
+			<h1>Search Results</h1>
+            <h2>Category: <?php echo $_SESSION['category']  ?></h2>
 			<div class="content-top1">
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single1.php">
+						<a href="searchSingle1.php">
 
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 1";
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -139,9 +143,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							
 
 						</a>
-						<h3><a href="single1.php">
+						<h3><a href="searchSingle1.php">
                             <?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 1";
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -167,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -190,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single1.php" class="item_add">See Details</a>
+								<a href="searchSingle1.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 					</div>
@@ -198,9 +202,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single2.php">
+						<a href="searchSingle2.php">
 
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 1,1";
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 1,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -224,9 +228,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						</a>
 						<h3>
-                           <a href="single2.php"> 
+                           <a href="searchSingle2.php"> 
                             <?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 1,1";
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 1,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -251,7 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 2,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 1,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -274,7 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single2.php" class="item_add">See Details</a>
+								<a href="searchSingle2.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -282,9 +286,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single3.php">
+						<a href="searchSingle3.php">
 
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 2,1";
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 2,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -307,8 +311,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							
 
 						</a>
-						<h3><a href="single3.php"><?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 2,1";
+						<h3><a href="searchSingle3.php"><?php
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 2,1";
+                            $resultID=mysqli_query($conn,$queryID);
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -333,7 +338,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 2,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 2,1";
+                            $resultID=mysqli_query($conn,$queryID);
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -356,7 +362,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single3.php" class="item_add">See Details</a>
+								<a href="searchSingle3.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -364,8 +370,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single4.php">
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 3,1";
+						<a href="searchSingle4.php">
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 3,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -385,8 +391,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 }   ?>" alt="" />
 						</a>
-						<h3><a href="single4.php"><?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 3,1";
+						<h3><a href="searchSingle4.php"><?php
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 3,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -411,7 +417,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 3,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 3,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -434,7 +440,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single4.php" class="item_add">See Details</a>
+								<a href="searchSingle4.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -445,8 +451,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="content-top1">
 				<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single5.php">
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 4,1";
+						<a href="searchSingle5.php">
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 4,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -466,8 +472,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 }   ?>" alt="" />
 						</a>
-						<h3><a href="single5.php"><?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 4,1";
+						<h3><a href="searchSingle5.php"><?php
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 4,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -492,7 +498,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 4,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 4,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -515,7 +521,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single5.php" class="item_add">See Details</a>
+								<a href="searchSingle5.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -524,8 +530,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single6.php">
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 5,1";
+						<a href="searchSingle6.php">
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 5,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -545,8 +551,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 }   ?>" alt="" />
 						</a>
-						<h3><a href="single6.php"><?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 5,1";
+						<h3><a href="searchSingle6.php"><?php
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 3,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -571,7 +577,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 5,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 3,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -594,7 +600,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single6.php" class="item_add">See Details</a>
+								<a href="searchSingle6.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -602,8 +608,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single7.php">
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 6,1";
+						<a href="searchSingle7.php">
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 6,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -623,8 +629,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 }   ?>" alt="" />
 						</a>
-						<h3><a href="single7.php"><?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 6,1";
+						<h3><a href="searchSingle7.php"><?php
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 6,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -649,7 +655,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 6,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 6,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -672,7 +678,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single7.php" class="item_add">See Details</a>
+								<a href="searchSingle7.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						
@@ -680,8 +686,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-3 col-md2">
 					<div class="col-md1">
-						<a href="single8.php">
-							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem ORDER BY ID desc limit 7,1";
+						<a href="searchSingle8.php">
+							<img class="img-responsive" src="showImage.php?ID=<?php  $queryID="SELECT ID FROM postItem where Category='$Category' ORDER BY ID desc limit 7,1";
                             $resultID=mysqli_query($conn,$queryID);
                                 
                                 
@@ -701,8 +707,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 }   ?>" alt="" />
 						</a>
-						<h3><a href="single8.php"><?php
-                                $queryTitle="SELECT Title FROM postItem ORDER BY ID desc limit 7,1";
+						<h3><a href="searchSingle8.php"><?php
+                                $queryTitle="SELECT Title FROM postItem where Category='$Category' ORDER BY ID desc limit 7,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -727,7 +733,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                ?></a></h3>
 						<div class="price">
 								<h5 class="item_price"><?php
-                                $queryTitle="SELECT price FROM postItem ORDER BY ID desc limit 7,1";
+                                $queryTitle="SELECT price FROM postItem where Category='$Category' ORDER BY ID desc limit 7,1";
                                 $resultTitle=mysqli_query($conn,$queryTitle); 
                                 
                                 if(!$resultTitle)
@@ -750,7 +756,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                 mysqli_free_result($res);
                                ?></h5>
-								<a href="single8.php" class="item_add">See Details</a>
+								<a href="searchSingle8.php" class="item_add">See Details</a>
 								<div class="clearfix"> </div>
 						</div>
 						

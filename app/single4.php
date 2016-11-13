@@ -305,7 +305,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 mysqli_free_result($res);
                                 ?></h1>
 							<h1><?php
-                                $IDquery="SELECT ID FROM postItem ORDER BY ID desc limit 3,1";
+                                $IDquery="SELECT Description FROM postItem ORDER BY ID desc limit 3,1";
                                 $IDresult=mysqli_query($conn,$IDquery);
                                 
                                 
