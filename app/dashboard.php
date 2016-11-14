@@ -18,10 +18,10 @@
         die("Connection failed!".mysqli_connect_error());
     }
 
-    $sql="SELECT * FROM postItem WHERE itemowner='{$_SESSION['username']}'";
+    $sql="SELECT Title,Category,price,Description,itemowner,date1,date2 FROM postItem WHERE itemowner='{$_SESSION['username']}'";
     $res=mysqli_query($conn,$sql); 
 
-    $sqlRented="SELECT * FROM rentItem WHERE renter='{$_SESSION['username']}'";
+    $sqlRented="SELECT itemRented,itemowner,date1,date2 FROM rentItem WHERE renter='{$_SESSION['username']}'";
     $resRented=mysqli_query($conn,$sqlRented); 
  
 ?>
@@ -92,11 +92,11 @@
 </div>
 <!--//header-->
 
-  
+<div class="container">  
     <h1>
         Items I've posted:
     </h1>
-    <div class="col-lg-offset-4">
+    <div class="col-lg-offset-2">
     
     <?php
     if(!$res)
@@ -126,7 +126,7 @@
     <h1>
         Items I've rented:
     </h1>
-    <div class="col-lg-offset-4">
+    <div class="col-lg-offset-2">
     
     <?php
     if(!$resRented)
@@ -151,7 +151,7 @@
     ?>
 
     </div>
-
+    </div>
         
 <!--         <h1>Dashboard</h1>
     	    <table >
