@@ -112,14 +112,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="row row-content" id="confirmation" name="confirmation">
     <div style="padding:10px">
           </div>
-      <div class="col-xs-8 col-lg-offset-3"> 
-          <h3>Search by category</h3>
-      </div>
-
         
         <!-- Trigger the modal with a button -->
 <div class="col-xs-8 col-lg-offset-5">
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Search</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Search by category</button>
 </div>
 <!-- Modal -->
 
