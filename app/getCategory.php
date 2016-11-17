@@ -102,7 +102,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				      <li><a  href="dashboard.php">Dashboard</a>
                       <li><a  href="blog.html">Blog</a>				
 				     
-										<li><a href="search.php"><img src="images/search.png" alt="Smiley face" height="42" width="42"></a></li>
+										<li>
+                                            <a href="searchKeyWord.php"><img src="images/search.png" alt="Smiley face" height="42" width="42"></a>
+                                            <a href="searchCategory.php"><img src="images/search.png" alt="Smiley face" height="42" width="42"></a>
+                                        </li>
 			  </ul> 
 			</div>
 				<div class="col-sm-2 search">		
