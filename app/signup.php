@@ -9,10 +9,10 @@ $conn=mysqli_connect($DB_HOST, $DB_ROOT, $DB_PASSWORD, $DB_NAME);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-mysqli_select_db($con, $DB_NAME);
+mysqli_select_db($conn, $DB_NAME);
 $query = "SELECT email FROM userAccount WHERE email ='$email'";
 $result=mysqli_query($conn,$query); 
-if(mysqli_num_rows($result)>=1){
+if(mysqli_num_rows($result)>0){
         echo"<script>
 alert('Email Adress Already Existed');
 window.location.href='index.html';
