@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				     
 										<li>
                                             <a href="searchKeyWord.php"><img src="images/search.png" alt="Smiley face" height="42" width="42"></a>
-                                            <a href="searchCategory.php"><img src="images/search.png" alt="Smiley face" height="42" width="42"></a>
+                                            <a href="searchCategory.php"><img src="images/Csearch.png" alt="Smiley face" height="42" width="42"></a>
                                         </li>
 			  </ul> 
 			</div>
